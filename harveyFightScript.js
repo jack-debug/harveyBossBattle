@@ -1,6 +1,6 @@
 var harveyHealth = 500;
 var playerHealth = 500;
-var randIntPlayer = 150;
+var randIntPlayer = 240;
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
@@ -31,8 +31,11 @@ function punch() {
     }
 }
 function defend(){
-    var addedDefend = getRandomInt(30)
+    var addedDefend = getRandomInt(35)
     randIntPlayer = randIntPlayer - addedDefend
+    if (randIntPlayer <= 0) {
+        randIntPlayer = 80
+    }
     alert('You defend! An extra ' + addedDefend + ' defense points have been added!')
     var steveAttack = getRandomInt(randIntPlayer)
     playerHealth = playerHealth - steveAttack
@@ -46,7 +49,7 @@ function defend(){
         alert("Steve Harvey challenges you to a duel! Do you punch or defend?")
     }
 }
-function defendDebug(var healthForHarvey, var healthForPlayer){
+function defendDebug(healthForHarvey, healthForPlayer){
     harveyHealth = healthForHarvey
     playerHealth = healthForPlayer
     var addedDefend = getRandomInt(30)
