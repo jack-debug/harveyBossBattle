@@ -48,7 +48,7 @@ function defend(){
 }
 function defendDebug(var healthForHarvey, var healthForPlayer){
     harveyHealth = healthForHarvey
-    playerHealth - healthForPlayer
+    playerHealth = healthForPlayer
     var addedDefend = getRandomInt(30)
     randIntPlayer = randIntPlayer - addedDefend
     alert('You defend! An extra ' + addedDefend + ' defense points have been added!')
