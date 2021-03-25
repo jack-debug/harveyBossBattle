@@ -46,3 +46,21 @@ function defend(){
         alert("Steve Harvey challenges you to a duel! Do you punch or defend?")
     }
 }
+function defendDebug(var healthForHarvey, var healthForPlayer){
+    harveyHealth = healthForHarvey
+    playerHealth - healthForPlayer
+    var addedDefend = getRandomInt(30)
+    randIntPlayer = randIntPlayer - addedDefend
+    alert('You defend! An extra ' + addedDefend + ' defense points have been added!')
+    var steveAttack = getRandomInt(randIntPlayer)
+    playerHealth = playerHealth - steveAttack
+    alert('Steve Harvey attacks you, dealing ' + steveAttack + ' damage. You have ' + playerHealth + ' health left.')
+    if (playerHealth <= 0) {
+        alert('You lose! Steve Harvey takes over the world.')
+        alert('Starting new game!')
+        harveyHealth = 500
+        playerHealth = 500
+        randIntPlayer = 150
+        alert("Steve Harvey challenges you to a duel! Do you punch or defend?")
+    }
+}
